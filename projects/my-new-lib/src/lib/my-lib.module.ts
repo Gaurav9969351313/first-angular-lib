@@ -4,15 +4,16 @@ import { CounterButtonComponent } from './counter-button/counter-button.componen
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
+import { HiddenDirective } from "./directives/hidden.directive";
 
 @NgModule({
-  declarations: [CounterButtonComponent],
+  declarations: [CounterButtonComponent, HiddenDirective],
   imports: [
     CommonModule,
     MatButtonModule,
     MatBadgeModule
   ],
-  exports: [CounterButtonComponent]
+  exports: [CounterButtonComponent, HiddenDirective]
 })
 export class MyLibModule {
 }

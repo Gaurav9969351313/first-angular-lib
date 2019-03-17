@@ -4,17 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MyLibModule } from 'my-new-lib';
+import { MyLibModule,MyNewLibModule } from 'my-new-lib';
+
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    MyNewLibModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MyLibModule.forRoot()
+    MyLibModule
   ],
   providers: [],
   bootstrap: [AppComponent]
