@@ -6,6 +6,8 @@ export * from './lib/my-new-lib.service';
 export * from './lib/my-new-lib.component';
 export * from './lib/my-new-lib.module';
 
+export * from './lib/directives/directives.module';
+
 export * from './lib/my-lib.module';
 export * from './lib/counter-button/counter-button.component';
 export { ToastrService } from 'ngx-toastr';

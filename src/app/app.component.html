@@ -9,4 +9,47 @@
 
 <h1 myHidden>Hidden Welcome</h1>
 
+<h1 [showHideVaiIp]="val">Hidden via ts</h1>
+
+<!-- <p> <span myUnderline>Hover to underline</span> </p> -->
+<p><span myItalic>Hii Gaurava </span></p>
+
+<p appHighlight>Highlight me!</p>
+
+<label for="digit-only">Digit Only input box</label>
+  <input id="digit-only" type="text" digitOnly placeholder="000">
+
+  <label for="digit-only-with-max-length">Digit Only input box with max length 3</label>
+  <input id="digit-only-with-max-length" type="text" digitOnly placeholder="000" maxlength="3">
+
+  <label for="creditcard_number">Digt Only input test in mobile device</label> 
+  <input type="text" name="creditcard" id="creditcard_number" placeholder="000" maxlength="3"
+    inputmode="numeric" pattern="[0-9]*" digitOnly>
+
+  <label for="text">regular text input</label>
+  <input id="text" type="text" placeholder="regular text input">
+
+  <label for="text">text input with pattern attribute</label>
+  <input type="text" pattern="[0-9]*" maxlength="3" name="code" title="3 digits code" placeholder="000">
+
+<div class="field">
+  <label for="">Password</label>
+  <input type="password" name="password" ngModel passwordToggle required>
+</div>
+
+<form #form="ngForm" (ngSubmit)="displayData(form.value)">
+
+	<input type="text" name="creditcardnumber" ngModel #cc="ngModel" validCreditCard />
+
+	<div *ngIf="cc.dirty && cc.errors?.creditCard" class="error">
+		{{cc.errors.creditCard}}
+	</div>
+
+	<button type="submit" *ngIf="form.valid">Send info</button>
+</form>
+
+<span tooltip="Tooltip" placement="top" show-delay="500">Tooltip on top</span>
+
+<span tooltip="Tooltip" [options]="myOptions">Tooltip on bottom</span>
+
 <router-outlet></router-outlet>
